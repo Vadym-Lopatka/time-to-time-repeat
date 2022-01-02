@@ -1,6 +1,6 @@
-package com.company.algos.twoPoints;
+package com.company.algos.twoPoints.linkedList;
 
-public class MiddleOfLinkedNodesList {
+public class ReturnMiddle {
     // return the middle element of the linked list {1 2 3 4 5} => 3
     // If there are two middle nodes, return the second middle node. {1 2 3 4 5 6} => 4
 
@@ -26,33 +26,5 @@ public class MiddleOfLinkedNodesList {
         }
 
         return slow;
-    }
-
-
-    static class LinkedNode {
-        int val;
-        LinkedNode next;
-
-        LinkedNode() {
-        }
-
-        LinkedNode(int[] ints) {
-            this.val = ints[0];
-            LinkedNode current = this;
-            for (int i = 1; i < ints.length; i++) {
-                LinkedNode node = new LinkedNode(ints[i]);
-                current.next = node;
-                current = node;
-            }
-        }
-
-        LinkedNode(int val) {
-            this.val = val;
-        }
-
-        LinkedNode(int val, LinkedNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
